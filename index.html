@@ -16,9 +16,13 @@
 
 <body style="margin: 0; overflow: hidden;">
     <a-scene renderer="logarithmicDepthBuffer: true;" vr-mode-ui='enabled: false' embedded arjs='sourceType: webcam;'>
+        <a-assets>
+            <a-asset-item id="molecula" src="molecula.gltf"></a-asset-item>
+        </a-assets>
+
         <a-camera gps-new-camera positionMinAccuracy="10" rotation-reader> </a-camera>
 
-        <a-box color="yellow" look-at="[gps-new-camera]" scale="1 1 1"
+        <a-gltf-model src="#tree" look-at="[gps-new-camera]"
             gps-new-entity-place="latitude: 38.999093; longitude: -9.0070356;" />
     </a-scene>
 </body>
